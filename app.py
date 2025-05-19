@@ -1,6 +1,9 @@
 from flask import Flask, request
 import tweepy
 import os
+port = int(os.environ.get("PORT", 5000))
+app.run(host="0.0.0.0", port=port)
+
 
 app = Flask(__name__)
 
@@ -23,5 +26,5 @@ def tweet():
 
 @app.route("/", methods=["GET"])
 def ping():
-    app.run(host="0.0.0.0", port=5000)
+    return "MMRC bot is running!", 200
 
