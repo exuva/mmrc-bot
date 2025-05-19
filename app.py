@@ -23,4 +23,5 @@ def tweet():
 
 @app.route("/", methods=["GET"])
 def ping():
-    return "MMRC bot is running!", 200
+    app.run(host="0.0.0.0", port=5000)
+
